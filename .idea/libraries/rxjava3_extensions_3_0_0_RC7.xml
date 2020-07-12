@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rxjava3-extensions-3.0.0-RC7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/rxjava3-extensions-3.0.0-RC7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

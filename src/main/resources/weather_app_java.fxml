@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <StackPane fx:id="rootPane" prefHeight="308.0" prefWidth="546.0">
+      <Pane fx:id="loadingPane" prefHeight="308.0" prefWidth="546.0">
+         <ProgressIndicator layoutX="241.0" layoutY="126.0" prefHeight="43.0" prefWidth="40.0" style="-fx-progress-color: black;" />
+         <Text fill="#171717" layoutX="205.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading please wait" textAlignment="CENTER" />
+      </Pane>
+      <Pane fx:id="weatherPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <Text fx:id="locationText" layoutX="225.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nairobi, KE" />
+         <Text fx:id="timeText" layoutX="227.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11:00 PM" />
+         <Text fx:id="todayTemp" layoutX="32.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="28 C" wrappingWidth="74.0">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Text>
+         <ImageView fx:id="todayImg" fitHeight="74.0" fitWidth="93.0" layoutX="401.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../../../flutter_apps/flutter_weather/assets/cloudy.png" />
+         </ImageView>
+         <Text fx:id="weatherStateName" layoutX="455.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cloudy" />
+         <FontIcon iconLiteral="fa-thermometer" iconSize="20" layoutX="14.0" layoutY="96.0" wrappingWidth="27.973958015441895" />
+         <FontIcon iconColor="#04683b" iconLiteral="fa-arrow-up" iconSize="12" layoutX="14.0" layoutY="133.0" wrappingWidth="27.973958015441895" />
+         <FontIcon iconColor="#f20707" iconLiteral="fa-arrow-down" iconSize="12" layoutX="14.0" layoutY="161.0" wrappingWidth="27.973958015441895" />
+         <Text fx:id="maxTmpToday" layoutX="42.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="35 C" />
+         <Text fx:id="minTempToday" layoutX="42.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="24 C" />
+         <Text fill="#06bed7" layoutX="12.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tomorrow" />
+         <Text fx:id="tomorrowTemp" layoutX="25.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="34/20" />
+         <Text fx:id="tomorrowWeatherState" layoutX="22.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sunny" />
+         <FontIcon iconColor="#19c1f8" iconLiteral="fa-tint" iconSize="12" layoutX="92.0" layoutY="133.0" wrappingWidth="27.973958015441895" />
+         <Text fx:id="todayHumidity" layoutX="113.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="57" />
+         <FontIcon iconColor="#1a1b1b" iconLiteral="fa-ravelry" iconSize="12" layoutX="92.0" layoutY="161.0" wrappingWidth="27.973958015441895" />
+         <Text fx:id="todayPressure" layoutX="114.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1015 mph" />
+         <FontIcon iconColor="#1a1b1b" iconLiteral="fa-map-marker" iconSize="12" layoutX="199.0" layoutY="25.0" wrappingWidth="27.973958015441895" />
+         <ImageView fx:id="tomorrowImg" fitHeight="34.0" fitWidth="41.0" layoutX="24.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../../../flutter_apps/flutter_weather/assets/clear.png" />
+         </ImageView>
+         <FontIcon iconLiteral="fa-thermometer" iconSize="12" layoutX="9.0" layoutY="262.0" wrappingWidth="27.973958015441895" />
+         <FontIcon iconLiteral="fa-long-arrow-up" iconSize="14" layoutX="11.0" layoutY="282.0" rotate="-26.6" wrappingWidth="27.973958015441895" />
+         <Text fx:id="tomorrowPressure" layoutX="28.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 mph" />
+         <Text fx:id="dayAfterTomorrowDate" fill="#06bed7" layoutX="174.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jul 13 " />
+         <ImageView fx:id="DafImg" fitHeight="34.0" fitWidth="41.0" layoutX="177.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../../../flutter_apps/flutter_weather/assets/clear.png" />
+         </ImageView>
+         <Text fx:id="dayAfWeatherStateName" layoutX="175.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sunny" />
+         <FontIcon iconLiteral="fa-thermometer" iconSize="12" layoutX="160.0" layoutY="262.0" wrappingWidth="27.973958015441895" />
+         <Text fx:id="dayAfterTemp" layoutX="176.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="34/20" />
+         <FontIcon iconLiteral="fa-long-arrow-up" iconSize="14" layoutX="160.0" layoutY="280.0" rotate="-26.6" wrappingWidth="27.973958015441895" />
+         <Text fx:id="dayAfterPressure" layoutX="175.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 mph" />
+         <Text layoutX="353.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key" />
+         <FontIcon iconLiteral="fa-thermometer" iconSize="12" layoutX="339.0" layoutY="253.0" wrappingWidth="27.973958015441895" />
+         <Text layoutX="386.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature">
+            <font>
+               <Font name="System Italic" size="10.0" />
+            </font>
+         </Text>
+         <FontIcon iconColor="#04683b" iconLiteral="fa-arrow-up" iconSize="12" layoutX="339.0" layoutY="273.0" wrappingWidth="27.973958015441895" />
+         <Text layoutX="382.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max temp">
+            <font>
+               <Font name="System Italic" size="10.0" />
+            </font>
+         </Text>
+         <FontIcon iconColor="#f20707" iconLiteral="fa-arrow-down" iconSize="12" layoutX="339.0" layoutY="292.0" wrappingWidth="27.973958015441895" />
+         <Text layoutX="383.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min temp">
+            <font>
+               <Font name="System Italic" size="10.0" />
+            </font>
+         </Text>
+         <FontIcon iconColor="#19c1f8" iconLiteral="fa-tint" iconSize="12" layoutX="339.0" layoutY="232.0" wrappingWidth="27.973958015441895" />
+         <Text layoutX="385.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="humidity">
+            <font>
+               <Font name="System Italic" size="10.0" />
+            </font>
+         </Text>
+         <FontIcon iconColor="#1a1b1b" iconLiteral="fa-ravelry" iconSize="12" layoutX="339.0" layoutY="215.0" wrappingWidth="27.973958015441895" />
+         <Text layoutX="386.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pressure">
+            <font>
+               <Font name="System Italic" size="10.0" />
+            </font>
+         </Text>
+      </Pane>
+      <Pane fx:id="errorPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <FontIcon iconLiteral="fa-wifi" iconSize="24" layoutX="251.0" layoutY="99.0" />
+         <Text layoutX="67.0"  fx:id="errorText" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="An error occurred. Please check your internet connection and try again. -(:" />
+
+      </Pane>
+   </StackPane>
+</AnchorPane>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ikonli-core-11.3.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/ikonli-core-11.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
